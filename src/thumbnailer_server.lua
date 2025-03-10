@@ -70,6 +70,7 @@ function create_thumbnail_ffmpeg(file_path, timestamp, size, output_path)
         "ffmpeg",
         "-loglevel", "quiet",
         "-noaccurate_seek",
+        "-threads", "auto",
         "-ss", format_time(timestamp, ":"),
         "-i", file_path,
 
